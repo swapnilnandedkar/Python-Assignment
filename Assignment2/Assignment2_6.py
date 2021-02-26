@@ -1,3 +1,11 @@
+#   6. Write a program which accept one number and display below pattern.
+
+#   Input : 5
+#   Output : * * * * *
+#            * * * *
+#            * * *
+#            * *
+#            *
 
 def PrintPattern(Number):
     for row in range(Number):

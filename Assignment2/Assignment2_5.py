@@ -1,3 +1,5 @@
+#   5.Write a program which accept one number for user and check whether number is prime or not.
+#   Input : 5 Output : It is Prime Number
 
 def IsPrime(Number):
 
@@ -15,10 +17,7 @@ def IsPrime(Number):
             counter+=1
         
     return isNumberPrime
-        
-
     
-    return isNumberPrime
 
 def main():
     print("Enter number")
