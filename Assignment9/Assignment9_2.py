@@ -11,6 +11,9 @@ class File:
         self.fileName = fileName
         self.fd = None
     
+    def isFileExists(self):
+        return os.path.exists(self.fileName)
+        
     def openFile(self,openMode):
         try:
             self.fd = open(self.fileName,mode = openMode,encoding ='utf-8')
@@ -40,20 +43,20 @@ def main():
     fileName = input()
 
     fobj = File(fileName)
-    print("Enter Y for update file N for no")
-    
-    updateFile = input().strip()
-    if updateFile == 'Y' or updateFile == 'y':
-        if os.path.exists(fileName):
-            if fobj.openFile('a+'):
-                print("Enter Data you want to insert in file :")
-                data = input()
-                fobj.writeFile("\n"+data)
+    if fobj.isFileExists():
+        print("Enter Y for update file N for no")
+        
+        updateFile = input().strip()
+        if updateFile == 'Y' or updateFile == 'y':
             
+                if fobj.openFile('a+'):
+                    print("Enter Data you want to insert in file :")
+                    data = input()
+                    fobj.writeFile("\n"+data)
         else:
-            print("File Not Found!!!!")
+            fobj.openFile('r')
     else:
-        fobj.openFile('r')
+        print("File Not Found!!!!")
     
     fobj.readFile()
     fobj.closeFile()
