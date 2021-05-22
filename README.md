@@ -10,4 +10,6 @@ Assignment6 - Assignment7  : Based on oops
 Assignment9 : This assignment based on File handling
 
 
-Script/Assignmet14 : Based on script to manipulate files based on there file extensions.
+Script:
+Assignmet14 : Manipulate files based on there file extensions.
+Assignmet15 : remove duplicate files by calculating checksum of files.
